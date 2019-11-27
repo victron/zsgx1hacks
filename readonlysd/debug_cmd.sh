@@ -43,6 +43,10 @@ mount --bind /media/hack/hosts.new /etc/hosts
 # sync the time
 /home/busybox/ntpd -p europe.pool.ntp.org
 
+# set timezone
+# https://docs.oracle.com/cd/E19057-01/nscp.cal.svr.35/816-5523-10/appf.htm
+echo "EET-2EETDST" > /etc/TZ
+
 # silence the voices - uncomment if needed
 #if [ ! -f /home/VOICE-orig.tgz ]; then
 #    cp /home/VOICE.tgz /home/VOICE-orig.tgz
