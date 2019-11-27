@@ -41,7 +41,9 @@ mount --bind /media/hack/hosts.new /etc/hosts
 (/home/busybox/tcpsvd -E 0.0.0.0 21 /home/busybox/ftpd -w / ) &
 
 # sync the time
-/home/busybox/ntpd -p europe.pool.ntp.org
+(/media/hack/test_connect.sh 40 europe.pool.ntp.org && \
+/home/busybox/ntpd -p europe.pool.ntp.org || \
+echo "may be need to run reboot") &
 
 # set timezone
 # https://docs.oracle.com/cd/E19057-01/nscp.cal.svr.35/816-5523-10/appf.htm
