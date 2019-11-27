@@ -73,6 +73,7 @@ You should also be able to find the firmware version by logging in via telnet an
   * Annoying whining noise reduced (RW version only currently)
   * WebUI accessible - http://IPAddress:8080/cgi-bin/webui
   * FTP Server pointing to the root file system - no username or password
+  * [WiFi Connection without inital setup with app in cls.conf](http://4pda.ru/forum/index.php?showtopic=928641&view=findpost&p=82237201)
 
 ### Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
@@ -94,7 +95,9 @@ You should also be able to find the firmware version by logging in via telnet an
 * Figure out GPIO control for Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
-* Find method to enable WiFi connection without using the app
+
+#### 2019-11-27
+* Adds the ability to have camera connect to WiFi without needing to setup the camera using the app/software.
 
 #### 2018-08-05 - Update 17 (ant-thomas)
 * Read-only hack created to enable cameras with a newer firmware to have extra features and turn off cloud connections.
