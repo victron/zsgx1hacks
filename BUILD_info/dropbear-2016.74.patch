@@ -1,0 +1,117 @@
+Only in dropbear-2016.74.mod: config.log
+Only in dropbear-2016.74.mod: config.status
+Only in dropbear-2016.74.mod: dropbearmulti.orig
+Only in dropbear-2016.74.mod/libtomcrypt: Makefile
+Only in dropbear-2016.74.mod/libtomcrypt/src/misc: mpi
+Only in dropbear-2016.74.mod/libtomcrypt/src/pk: dh
+Only in dropbear-2016.74.mod/libtommath: Makefile
+diff -crB dropbear-2016.74/options.h dropbear-2016.74.mod/options.h
+*** dropbear-2016.74/options.h	2019-12-12 12:47:13.084754300 +0200
+--- dropbear-2016.74.mod/options.h	2019-12-08 10:33:45.000000000 +0200
+***************
+*** 21,33 ****
+  
+  /* Default hostkey paths - these can be specified on the command line */
+  #ifndef DSS_PRIV_FILENAME
+! #define DSS_PRIV_FILENAME "/etc/dropbear/dropbear_dss_host_key"
+  #endif
+  #ifndef RSA_PRIV_FILENAME
+! #define RSA_PRIV_FILENAME "/etc/dropbear/dropbear_rsa_host_key"
+  #endif
+  #ifndef ECDSA_PRIV_FILENAME
+! #define ECDSA_PRIV_FILENAME "/etc/dropbear/dropbear_ecdsa_host_key"
+  #endif
+  
+  /* Set NON_INETD_MODE if you require daemon functionality (ie Dropbear listens
+--- 21,33 ----
+  
+  /* Default hostkey paths - these can be specified on the command line */
+  #ifndef DSS_PRIV_FILENAME
+! #define DSS_PRIV_FILENAME "/media/fake_root/etc/dropbear/dropbear_dss_host_key"
+  #endif
+  #ifndef RSA_PRIV_FILENAME
+! #define RSA_PRIV_FILENAME "/media/fake_root/etc/dropbear/dropbear_rsa_host_key"
+  #endif
+  #ifndef ECDSA_PRIV_FILENAME
+! #define ECDSA_PRIV_FILENAME "/media/fake_root/etc/dropbear/dropbear_ecdsa_host_key"
+  #endif
+  
+  /* Set NON_INETD_MODE if you require daemon functionality (ie Dropbear listens
+***************
+*** 83,90 ****
+   * to a remote TCP-forwarded connection */
+  #define ENABLE_CLI_NETCAT
+  
+! /* Whether to support "-c" and "-m" flags to choose ciphers/MACs at runtime */
+! #define ENABLE_USER_ALGO_LIST
+  
+  /* Encryption - at least one required.
+   * Protocol RFC requires 3DES and recommends AES128 for interoperability.
+--- 83,90 ----
+   * to a remote TCP-forwarded connection */
+  #define ENABLE_CLI_NETCAT
+  
+! /* Whether to support "-c" and "-m" flags to choose ciphers/MACs at runtime 
+! #define ENABLE_USER_ALGO_LIST */
+  
+  /* Encryption - at least one required.
+   * Protocol RFC requires 3DES and recommends AES128 for interoperability.
+***************
+*** 198,204 ****
+  
+  /* The MOTD file path */
+  #ifndef MOTD_FILENAME
+! #define MOTD_FILENAME "/etc/motd"
+  #endif
+  
+  /* Authentication Types - at least one required.
+--- 198,204 ----
+  
+  /* The MOTD file path */
+  #ifndef MOTD_FILENAME
+! #define MOTD_FILENAME "/media/fake_root/etc/motd"
+  #endif
+  
+  /* Authentication Types - at least one required.
+***************
+*** 220,229 ****
+  #define ENABLE_SVR_PUBKEY_AUTH
+  
+  /* Whether to take public key options in 
+!  * authorized_keys file into account */
+  #ifdef ENABLE_SVR_PUBKEY_AUTH
+  #define ENABLE_SVR_PUBKEY_OPTIONS
+! #endif
+  
+  /* This requires getpass. */
+  #ifdef HAVE_GETPASS
+--- 220,229 ----
+  #define ENABLE_SVR_PUBKEY_AUTH
+  
+  /* Whether to take public key options in 
+!  * authorized_keys file into account 
+  #ifdef ENABLE_SVR_PUBKEY_AUTH
+  #define ENABLE_SVR_PUBKEY_OPTIONS
+! #endif*/
+  
+  /* This requires getpass. */
+  #ifdef HAVE_GETPASS
+***************
+*** 300,306 ****
+   * OpenSSH), set the path below. If the path isn't defined, sftp will not
+   * be enabled */
+  #ifndef SFTPSERVER_PATH
+! #define SFTPSERVER_PATH "/usr/libexec/sftp-server"
+  #endif
+  
+  /* This is used by the scp binary when used as a client binary. If you're
+--- 300,306 ----
+   * OpenSSH), set the path below. If the path isn't defined, sftp will not
+   * be enabled */
+  #ifndef SFTPSERVER_PATH
+! #define SFTPSERVER_PATH "/media/fake_root/usr/libexec/sftp-server"
+  #endif
+  
+  /* This is used by the scp binary when used as a client binary. If you're
+Only in dropbear-2016.74: options.patch
+Only in dropbear-2016.74.mod: test.txt
