@@ -11,12 +11,11 @@ mv .config.STATIC ..config
 ## 2. common: set env to use toolchain
 
 ```
-bin=/home/vic/Camera/buildroot-2019.11/output/host/bin
-sbin=/home/vic/Camera/buildroot-2019.11/output/host/sbin
-TODO: use another prefix
-prefix=/home/vic/Camera/dropbear-2019.78/sysroot
-zlib=/home/vic/Camera/buildroot-2019.11/output/build/libzlib-1.2.11
-strip=/home/vic/Camera/buildroot-2019.11/output/host/bin/arm-buildroot-linux-uclibcgnueabi-strip
+bin=~/Camera/buildroot-2019.11/output/host/bin
+sbin=~/Camera/buildroot-2019.11/output/host/sbin
+prefix=~/Camera/sysroot
+zlib=~/Camera/buildroot-2019.11/output/build/libzlib-1.2.11
+strip=~/Camera/buildroot-2019.11/output/host/bin/arm-buildroot-linux-uclibcgnueabi-strip
 ```
 add path to toolchain
 `export PATH=$bin:$sbin:$PATH`
@@ -37,7 +36,7 @@ or replace [options.h](./options.h)
 ./configure \
 --host=arm-buildroot-linux-uclibcgnueabi \
 --disable-lastlog \
---prefix=/home/vic/Camera/dropbear-2019.78/sysroot \
+--prefix=$prefix \
 --disable-zlib \
 CFLAGS="-static" \
 LDFLAGS="-static" \
@@ -68,10 +67,12 @@ LD=arm-buildroot-linux-uclibcgnueabi-ld \
 
 ```
 MULTI=1 SCPPROGRESS=0 PROGRAMS="dropbear" make strip
+TODO: dropbearkey not working, also flag -R
 # MULTI=1 SCPPROGRESS=0 PROGRAMS="dropbear dbclient dropbearkey dropbearconvert scp" strip
 make PROGRAMS="dropbearmulti" install
 # make PROGRAMS="dropbear dbclient dropbearkey dropbearconvert scp" install
 ```
+
 `make DESTDIR="${PWD}/root_dir" install` install into dir
 
 
