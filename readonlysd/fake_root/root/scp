@@ -1,0 +1,2 @@
+#!/bin/sh
+/media/hack/dropbearmulti scp $@
