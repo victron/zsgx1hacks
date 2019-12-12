@@ -66,8 +66,7 @@ LD=arm-buildroot-linux-uclibcgnueabi-ld \
 ### 3.3. build and install
 
 ```
-MULTI=1 SCPPROGRESS=0 PROGRAMS="dropbear" make strip
-TODO: dropbearkey not working, also flag -R
+MULTI=1 SCPPROGRESS=0 PROGRAMS="dropbear dropbearkey scp" make strip
 # MULTI=1 SCPPROGRESS=0 PROGRAMS="dropbear dbclient dropbearkey dropbearconvert scp" strip
 make PROGRAMS="dropbearmulti" install
 # make PROGRAMS="dropbear dbclient dropbearkey dropbearconvert scp" install
