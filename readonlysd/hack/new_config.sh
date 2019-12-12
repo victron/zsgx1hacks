@@ -29,5 +29,4 @@ echo '' > /var/log/wtmp
 /home/busybox/httpd -p 8080 -h /media/hack/www
 
 # setup and install dropbear ssh server
-#/media/hack/dropbearmulti dropbear -r /media/hack/dropbear_ecdsa_host_key
-/media/fake_root/bin/dropbearmulti dropbear -r /media/hack/dropbear_ecdsa_host_key
+/media/fake_root/bin/dropbearmulti dropbear -R
