@@ -1,8 +1,11 @@
 #!/bin/sh
+# ----- put this 1-st -------
+# test_connect.sh will wait for interfaces come UP
 # sync the time
 /media/hack/test_connect.sh 40 europe.pool.ntp.org && \
 /home/busybox/ntpd -p europe.pool.ntp.org || \
 echo "may be need to run reboot"
+# ----------------------------
 
 # set timezone
 # https://docs.oracle.com/cd/E19057-01/nscp.cal.svr.35/816-5523-10/appf.htm
@@ -30,3 +33,8 @@ echo '' > /var/log/wtmp
 
 # setup and install dropbear ssh server
 /media/fake_root/bin/dropbearmulti dropbear -R
+
+# start Anonymous FTP server
+# (/home/busybox/tcpsvd -E 0.0.0.0 21 /home/busybox/ftpd -w ~ ) &
+# stop telnet
+killall telnetd

@@ -24,3 +24,6 @@ cd /media/fake_root/bin/
 ## ssh public key
 put your key in `~/.ssh/authorized_keys`
 file permissions not checked. (looks a bug in dropbear-2016.74 fortunately:) ) 
+
+## ftp and telnet
+disabled in `hack/new_config.sh`

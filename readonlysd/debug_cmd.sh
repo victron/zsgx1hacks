@@ -20,8 +20,6 @@ mkdir -p /home/busybox
 mount --bind /media/hack/busybox /bin/busybox
 /bin/busybox --install -s /home/busybox
 
-# start ftp server
-(/home/busybox/tcpsvd -E 0.0.0.0 21 /home/busybox/ftpd -w / ) &
 
 # new config
 /media/hack/new_config.sh &
