@@ -1,14 +1,14 @@
-## 1. buildroot: install uClibc toolchain 
+## buildroot: install uClibc toolchain 
 
 - tested on buildroot-2019.11
-- for quick inctructions can be used [this](https://www.uclibc.org/toolchains.html)
+- for quick instructions can be used [this](https://www.uclibc.org/toolchains.html)
 - to avoid `make menuconfig` can be used one from configs [.config.SHARED](./.config.SHARED) or [.config.STATIC](./.config.STATIC)
 
 ```
 mv .config.STATIC ..config
 ```
 
-## 2. common: set env to use toolchain
+## common: set env to use toolchain
 
 ```
 bin=~/Camera/buildroot-2019.11/output/host/bin
@@ -20,10 +20,10 @@ strip=~/Camera/buildroot-2019.11/output/host/bin/arm-buildroot-linux-uclibcgnuea
 add path to toolchain
 `export PATH=$bin:$sbin:$PATH`
 
-## 3. dropbear: build
+## dropbear: build
 
 - tested on dropbear-2016.74
-### 3.1. apply patch with new options 
+### apply patch with new options 
 
 [dropbear-2016.74.patch](./dropbear-2016.74.patch)
 ```
@@ -31,7 +31,7 @@ patch -p1 -i dropbear-2016.74.patch
 ```
 or replace [options.h](./options.h)
 
-### 3.2. configure
+### configure
 ```
 ./configure \
 --host=arm-buildroot-linux-uclibcgnueabi \
@@ -63,7 +63,7 @@ LD=arm-buildroot-linux-uclibcgnueabi-ld \
 --build=x86_64-pc-linux-gnu \
 ```
 
-### 3.3. build and install
+### build and install
 
 ```
 MULTI=1 SCPPROGRESS=0 PROGRAMS="dropbear dropbearkey scp" make strip
@@ -75,11 +75,11 @@ make PROGRAMS="dropbearmulti" install
 `make DESTDIR="${PWD}/root_dir" install` install into dir
 
 
-## 4. openssh: build
+## openssh: build
 
 - tested on `openssh-8.1p1`
 
-### 4.1. configure
+### configure
 ```
 ./configure \
 --host=arm-buildroot-linux-uclibcgnueabi \
@@ -97,7 +97,7 @@ make PROGRAMS="dropbearmulti" install
 --disable-strip \
 ```
 
-### 4.2. build and install
+### build and install
 ```
 make        
 make install   # can be error related to prefix
@@ -106,7 +106,7 @@ $strip -s $prefix/libexec/sftp-server
 `sysroot/libexec/sftp-server`
 
 
-## 5. useful checks
+## useful checks
 ```
 file dropbearmulti
 readelf -l dropbearmulti|grep "program interpreter"
