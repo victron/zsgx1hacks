@@ -20,6 +20,9 @@ mkdir -p /home/busybox
 mount --bind /media/hack/busybox /bin/busybox
 /bin/busybox --install -s /home/busybox
 
+# custom p2pcam
+# http://4pda.ru/forum/index.php?showtopic=928641
+# mount --bind /media/fake_root/p2pcam/p2pcam /p2pcam/p2pcam
 
 # new config
 /media/hack/new_config.sh &
