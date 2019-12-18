@@ -40,3 +40,10 @@ add to the end
 ##### more info
 [info about driver](https://github.com/ant-thomas/zsgx1hacks/blob/master/ptz/ptz.md)
 [more about driver](http://4pda.ru/forum/index.php?showtopic=928641&view=findpost&p=82742427)
+
+
+## p2pcam settings
+settings located in `/home/hwcfg.ini` or bind to `/media/fake_root/...`
+
+`voice_volume = 4` - info voice volume
+`show_osd_time = 1` - show date and time on video stream
