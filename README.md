@@ -6,7 +6,7 @@ All current changes related to `./readonlysd`
 
 - legacy [parent](https://github.com/ant-thomas/zsgx1hacks) project
 - install [instruction](./readonlysd/INSTALL.md)
-- build [info](./BUILD_info/README.md)
+- build [info](./INFO/buildroot/README.md)
 - PTZ and IfRed: http://iP-Addr:8080/cgi-bin/webui (http://4pda.ru/forum/index.php?showtopic=928641&st=0#entry79020856)
 
 ### iSpy notes
@@ -42,7 +42,7 @@ add to the end
 [more about driver](http://4pda.ru/forum/index.php?showtopic=928641&view=findpost&p=82742427)
 
 
-## p2pcam settings
+### p2pcam settings
 settings located in `/home/hwcfg.ini` or bind to `/media/fake_root/...`
 
 `voice_volume = 4` - info voice volume

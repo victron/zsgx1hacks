@@ -1,0 +1,93 @@
+[HW] auto_reboot : 1
+[HW] support_ptz : 1
+[HW] ptz_one_step : 2
+[HW] sensor_position : 0
+[HW] support_eth : 1
+[HW] main_bps : -1
+[HW] main_fps : -1
+[HW] sub_bps : -1
+[HW] sub_fps : -1
+[HW] support_fisheye : 0
+[HW] local_quality_auto : 1
+[HW] voice_prompt : 1
+[HW] sound_detect : 1
+[HW] sound_level : 98
+[HW] motion_level : 1
+[HW] support_twoway_speech : 0
+[HW] ir_detect_type : 2
+[HW] adc_chan : 0
+[HW] adc_setting_max : -300
+[HW] adc_setting_min : 800
+[HW] buzzer_time : 30
+[HW] cds_lvl_night : 0
+[HW] ircut_reverse : 0
+[HW] ircut1_lvl : 1
+[HW] ircut2_lvl : 1
+[HW] ir_light_lvl : 1
+[HW] white_light_lvl : 0
+[HW] smart_ai_mode : 0
+[HW] support_433 : 0
+[HW] support_smartfeed : 0
+[HW] buzzer_mode : 2
+[HW] support_pir : 0
+[HW] support_onekeycall : 0
+[HW] show_logo : -1
+[HW] support_syncledtime : 0
+[HW] support_wifikit : 0
+[HW] support_ap_mode : 1
+[HW] support_doublelight : 0
+[HW] ptz_mic_mode : 0
+[HW] support_mp4record : 1
+[HW] voice_volume : 4
+[HW] hisi_redCastGain : -1
+[HW] standard_definition : 1
+[HW] talk_volume : 2
+[HW] support_allid : 1
+[HW] support_autosaturation : 0
+[HW] fisheye_mode : -1
+[HW] support_breakpointrecord : 0
+[HW] night_smear : 0
+[HW] support_mdzone : 0
+[HW] agcnight_value : 12000
+[HW] agcday_value : 2500
+[HW] mic_value : 48
+[HW] power_freq : 0
+[HW] support_ymv : 0
+[HW] ptzAdjustCount : 10
+[HW] support_onvif : 1
+[HW] parallel_ptz_ircut : 0
+---------open /tmp/sc2135 failed
+---------open /tmp/sc2235 failed
+---------open /tmp/sc1235 failed
+---------open /tmp/ar0130 failed
+---------open /tmp/sc1145 failed
+---------open /tmp/jxh42 failed
+---------open /tmp/sc1135 failed
+---------open /tmp/jxh62 failed
+---------open /tmp/f22 failed
+---------open /tmp/f23 failed
+---------open /tmp/gc1034 failed
+---------open /tmp/gc2033 ok
+[HW] gk_mirror_type : 0
+[HW] max_pps : -1
+[HW] max_pps : 1000
+[HW] xchg_dir : -1
+[HW] xchg_dir : 2
+[HW] other_flags : -1
+[HW] other_flags : 544
+[HW] hmotor_upbound : -1
+[HW] hmotor_upbound : 510
+[HW] vmotor_upbound : -1
+[HW] vmotor_upbound : 180
+[HW] hspd_normal : -1
+[HW] hspd_normal : 50
+[HW] vspd_normal : -1
+[HW] vspd_normal : 30
+[HW] hspd_slfck : -1
+[HW] hspd_slfck : 50
+[HW] vspd_slfck : -1
+[HW] vspd_slfck : 30
+[HW] hspd_reloc : -1
+[HW] hspd_reloc : -1
+[HW] vspd_reloc : -1
+[HW] vspd_reloc : -1
