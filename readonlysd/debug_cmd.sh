@@ -20,8 +20,12 @@ mkdir -p /home/busybox
 mount --bind /media/hack/busybox /bin/busybox
 /bin/busybox --install -s /home/busybox
 
+# disable p2pcam
+/media/hack/p2pcam_off.sh
+
 # new settings for p2pcam
-#mount --bind /media/fake_root/home/hwcfg.ini /home/hwcfg.ini
+# mount --bind /media/fake_root/home/hwcfg.ini /home/hwcfg.ini
+
 
 # custom p2pcam
 # http://4pda.ru/forum/index.php?showtopic=928641

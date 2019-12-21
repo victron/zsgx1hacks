@@ -47,3 +47,10 @@ settings located in `/home/hwcfg.ini` or bind to `/media/fake_root/...`
 
 `voice_volume = 4` - info voice volume
 `show_osd_time = 1` - show date and time on video stream
+
+#### disable p2pcam
+
+during startup `p2pcam` creates watchdog, so after killing system rebooted
+- [p2pcam_off.sh](./readonlysd/hack/p2pcam_off.sh) setup wifi when p2pcam not working, called by [debug_cmd.sh](./readonlysd/debug_cmd.sh)
+- [p2pcam_dummy](./readonlysd/fake_root/p2pcam/p2pcam_dummy) empty scripted which called instead bin file by `/home/start.sh`
+ - [wpa_supplicant.conf](./readonlysd/fake_root/home/wpa_supplicant.conf) wifi settings

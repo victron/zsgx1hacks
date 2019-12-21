@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# do nothing, needed for /home/start.sh, to avoid start p2pcam
+exit 0
