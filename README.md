@@ -9,6 +9,9 @@ All current changes related to `./readonlysd`
 - build [info](./INFO/buildroot/README.md)
 - PTZ and IfRed: http://iP-Addr:8080/cgi-bin/webui (http://4pda.ru/forum/index.php?showtopic=928641&st=0#entry79020856)
 
+### HW info
+`ls /tmp | grep -F gc` sensor type
+
 ### iSpy notes
 
 #### PTZ
